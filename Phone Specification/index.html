@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="abc.css">
+    <title>Redmi 6 pro</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+                <p id="p">Redmi 6 Pro</p>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#Home">HOME</a></li>
+                    <li><a href="#phone">PHONE</a></li>
+                    <li><a href="#accessories">ACCESSORIES</a></li>
+                    <li><a href="#cart">CART</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="overlay"></div>
+            <img src="mobile.png" alt="Mobile Phone" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="camera.png">
+                    <div>
+                        <h2>Camera</h2>
+                        <p>12MP Dual (Primary), 5MP selfie</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="processor.png">
+                    <div>
+                        <h2>Processor</h2>
+                        <p>Snapdragon 625 Octa-Core</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="display.png">
+                    <div>
+                        <h2>Display</h2>
+                        <p>5.84" 1080 x 2280 pixels</p>
+                    </div>
+                </div>
+                <div class="feature fourth">
+                    <img src="battery.png">
+                    <div>
+                        <h2>Battery</h2>
+                        <p>4000mAh Li-Po </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="arrow.png" id="upbtn">
+            <h2>Feature's</h2>
+            <img src="arrow.png" id="dnbtn">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var dnbtn = document.getElementById("dnbtn");
+
+        var rotateVal = circle.style.transform;
+        var rotatesum;
+
+        upbtn.onclick = function() {
+            rotatesum = rotateVal + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotateVal = rotatesum;
+        }
+        dnbtn.onclick = function() {
+            rotatesum = rotateVal + "rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotateVal = rotatesum;
+        }
+    </script>
+
+</body>
+</html>
